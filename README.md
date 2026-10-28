@@ -23,7 +23,7 @@ This repository demonstrates a modern, low-maintenance approach to mobile UI aut
 - Tag-based suites for fast release gates
 - Screenshots at high-value evidence points
 - Static flow validation on every pull request
-- Optional Maestro Cloud execution when repository secrets are configured
+- A clean extension point for Maestro Cloud or an emulator-based device job
 
 ## Structure
 
@@ -56,7 +56,7 @@ Update `appId`, replace the visible labels with stable accessibility text from y
 
 ## CI and device strategy
 
-The default GitHub workflow validates the repository without requiring an emulator. If `MAESTRO_API_KEY`, `MAESTRO_PROJECT_ID`, and an app artifact are available, the cloud job executes the same flows on managed devices. This separation keeps pull requests fast while preserving a path to real-device confidence.
+The default GitHub workflow validates the repository without requiring an emulator. A product team can add a protected Maestro Cloud or emulator job once its app artifact, device matrix, secrets, and release environment are defined. This separation keeps pull requests fast while preserving a path to real-device confidence.
 
 ## Mobile automation principles
 
