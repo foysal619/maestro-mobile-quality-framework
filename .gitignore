@@ -1,0 +1,6 @@
+app/*.apk
+app/*.ipa
+.maestro/tests/
+*.log
+.idea/
+.vscode/

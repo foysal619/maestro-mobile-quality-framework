@@ -1,0 +1,16 @@
+appId: org.wikipedia
+name: "Accessibility | Core controls remain discoverable"
+tags:
+  - accessibility
+  - android
+---
+- launchApp
+- runFlow:
+    when:
+      visible: "Skip"
+    commands:
+      - tapOn: "Skip"
+- assertVisible: "Search Wikipedia"
+- assertVisible: "Explore"
+- assertVisible: "Saved"
+- assertVisible: "History"

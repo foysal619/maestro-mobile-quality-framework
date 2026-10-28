@@ -1,0 +1,21 @@
+appId: org.wikipedia
+name: "Regression | Open an article and return"
+tags:
+  - regression
+  - android
+---
+- launchApp
+- runFlow:
+    when:
+      visible: "Skip"
+    commands:
+      - tapOn: "Skip"
+- tapOn: "Search Wikipedia"
+- inputText: "Quality assurance"
+- tapOn:
+    text: "Quality assurance"
+    index: 0
+- assertVisible:
+    text: ".*Quality assurance.*"
+- back
+- assertVisible: "Search Wikipedia"

@@ -1,0 +1,19 @@
+appId: org.wikipedia
+name: "Smoke | Launch and search"
+tags:
+  - smoke
+  - android
+---
+- launchApp:
+    clearState: true
+- runFlow:
+    when:
+      visible: "Skip"
+    commands:
+      - tapOn: "Skip"
+- assertVisible: "Search Wikipedia"
+- tapOn: "Search Wikipedia"
+- inputText: "Software testing"
+- assertVisible:
+    text: ".*Software testing.*"
+- takeScreenshot: "search-results"

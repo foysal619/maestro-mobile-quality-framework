@@ -1,0 +1,13 @@
+{
+  "name": "maestro-mobile-quality-framework",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Readable Android mobile automation flows with Maestro and CI-ready validation.",
+  "scripts": {
+    "validate": "node scripts/validate-flows.mjs",
+    "test:smoke": "maestro test --include-tags=smoke .maestro/flows",
+    "test:regression": "maestro test --include-tags=regression .maestro/flows",
+    "test": "maestro test .maestro/flows"
+  },
+  "engines": { "node": ">=20" }
+}
